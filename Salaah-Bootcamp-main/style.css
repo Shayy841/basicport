@@ -4,7 +4,7 @@
     color: white;
 }
 
-.navbar{
+/* .navbar{
     height: 12%;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ nav ul li a{
     color: black;
     font-size: 13px;
     color: white;
-}
+} */
 
 .container
 {
@@ -201,10 +201,6 @@ input
         font-size: 8px;
     }
     
-    nav{
-        flex: 0.7;
-        display: inline-block;
-    }
     .profile
     {   
         padding: 1.5rem;
@@ -223,3 +219,92 @@ input {
     border-bottom: 1px solid black;
     border-color: white;
   }
+
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-links {
+    height: 100%;
+  }
+  
+  .brand-title {
+    font-size: 2.2rem;
+    margin: 0.5rem;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+    margin-left: 30px;
+  }
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 13px;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .toggle-button {
+      display: flex;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+  
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .navbar-links ul li {
+      text-align: center;
+    }
+  
+    .navbar-links ul li a {
+      padding: 0.5rem 1rem;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  }  
